@@ -9,10 +9,10 @@ for (let i = 0; i < myGrades.length; i++) {
 myAverage = myAverage / myGrades.length
 
 console.log("My grade average is " + myAverage);
-
+class InputError extends error {}
 function except(myNumber){
     if (isNaN(myNumber)){
-        throw new Error ("Invalid Input, Must Enter Numbers")
+        throw new error ("Invalid Input, Must Enter Numbers")
     }
     while (true) {
         let myNumber = promptForNumber ();
