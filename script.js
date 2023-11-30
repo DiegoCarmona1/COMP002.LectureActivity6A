@@ -24,13 +24,13 @@ function exceptCheck (number) {
     throw new InputError ("Invalid Input, Must use value smaller than 100")
    }
    if (number % 4){
-    throw new BugError ("no more numbers")
+    throw new BugError ("Invalid input, only values divisible by 4")
    }
     return number * 5;
 }
 console.log (exceptCheck(0))
 try {
-    console.log(exceptCheck(8))
+    console.log(exceptCheck(4))
 } catch (error) {
     if (error instanceof BugError) {
         console.log("no more monkeys")
