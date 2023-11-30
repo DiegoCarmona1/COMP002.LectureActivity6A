@@ -21,4 +21,4 @@ function exceptCheck (number) {
    }
     return number * 5;
 }
-console.log (exceptCheck(10))
+console.log (exceptCheck("wow"))
