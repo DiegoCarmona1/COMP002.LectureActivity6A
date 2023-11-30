@@ -13,7 +13,7 @@ function exceptCheck (number) {
    if (isNaN(number)) {
     throw new InputError ("Invalid Input Must Use NUmbers")
    }
-   if (number = number.filter(number => number < 0)) {
+   if (number < 0) {
     throw new InputError ("Invalid Input, Must use Positive values")
    }
    if (number > 100) {
@@ -21,4 +21,4 @@ function exceptCheck (number) {
    }
     return number * 5;
 }
-
+console.log (exceptCheck(10))
