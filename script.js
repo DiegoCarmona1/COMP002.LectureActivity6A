@@ -9,20 +9,16 @@ for (let i = 0; i < myGrades.length; i++) {
 myAverage = myAverage / myGrades.length
 
 console.log("My grade average is " + myAverage);
-class InputError extends error {}
-function except(myNumber){
-    if (isNaN(myNumber)){
-        throw new error ("Invalid Input, Must Enter Numbers")
-    }
-    while (true) {
-        let myNumber = promptForNumber ();
-        try {
-            let result = except(myNumber);
-        }
-        catch (error) {
-            console.log("Please Enter Only Numeric Values!");
-        }
-    }
-    return myNumber
+function exceptCheck (number) {
+   if (isNaN(number)) {
+    throw new InputError ("Invalid Input Must Use NUmbers")
+   }
+   if (number = number.filter(number => number < 0)) {
+    throw new InputError ("Invalid Input, Must use Positive values")
+   }
+   if (number > 100) {
+    throw new InputError ("Invalid Input, Must use value smaller than 100")
+   }
+    return number * 5;
 }
-console.log("My favorite number is " + except(6))
+
