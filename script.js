@@ -23,14 +23,14 @@ function exceptCheck (number) {
    if (number > 100) {
     throw new InputError ("Invalid Input, Must use value smaller than 100")
    }
-   if (isFinite(number)){
+   if (number % 4){
     throw new BugError ("no more numbers")
    }
     return number * 5;
 }
 console.log (exceptCheck(0))
 try {
-    console.log(exceptCheck(6))
+    console.log(exceptCheck(8))
 } catch (error) {
     if (error instanceof BugError) {
         console.log("no more monkeys")
