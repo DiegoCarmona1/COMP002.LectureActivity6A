@@ -21,4 +21,11 @@ function exceptCheck (number) {
    }
     return number * 5;
 }
-console.log (exceptCheck(1000))
+console.log (exceptCheck(7))
+try {
+    console.log(exceptCheck("wow"))
+} catch (error) {
+    console.log("Please Enter numeric values only")
+} finally {
+    console.log("Please run numbers between 0 - 100")
+}
